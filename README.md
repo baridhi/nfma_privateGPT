@@ -12,6 +12,10 @@ I've tinkered with different AI models ranging from Llama to Deepseek, but found
 So, it is set as default for now. Of course, these upstream models are not trained for muni bonds. That would be the gold standard and I would need GPUs. 
 My current approach uses retrieval augmented generation (RAG) on top of open-source LLM's.
 
+# Ollama Set up
+See the instructions here: https://github.com/ollama/ollama
+
+
 # Steps
 
 In order to run this repository, do the following:
