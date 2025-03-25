@@ -13,8 +13,9 @@ So, it is set as default for now. Of course, these upstream models are not train
 My current approach uses retrieval augmented generation (RAG) on top of open-source LLM's.
 
 # Ollama Set up
-See the instructions here: https://github.com/ollama/ollama
-
+See the instructions here: https://github.com/ollama/ollama .
+In my experience, the RAG pipeline works better on Mac (vs Windows) because of its OS' capabilities to optimize the system architecture and memory management.
+If you're using Windows, you may want to consider going via the Linux/Ubuntu route of OS.
 
 # Steps
 
