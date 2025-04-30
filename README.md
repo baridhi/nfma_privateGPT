@@ -12,6 +12,8 @@ I've tinkered with different AI models ranging from Llama to Deepseek, but found
 So, it is set as default for now. Of course, these upstream models are not trained for muni bonds. That would be the gold standard and I would need GPUs. 
 My current approach uses retrieval augmented generation (RAG) on top of open-source LLM's.
 
+More specifically, the system allows users to upload PDF documents, which are processed into smaller text chunks using PyMuPDFLoader. These chunks are embedded using OllamaEmbeddingFunction and stored in a chromadb vector collection for efficient retrieval. Metadata and document chunks are added to the vector store, and users receive confirmation once the data is successfully stored. When a user submits a question, the system queries the vector database for relevant chunks, and generates a detailed, structured answer with Ollama’s chat model. This ensures clarity and completeness based on the retrieved content.
+
 # Ollama Set up
 See the instructions here: https://github.com/ollama/ollama .
 In my experience, the RAG pipeline works better on Mac (vs Windows) because of its OS' capabilities to optimize the system architecture and memory management.
@@ -38,6 +40,7 @@ In order to run this repository, do the following:
 6. Launch the user-interface app by running:
    streamlit run ./assistant/assistant_ui.py
 
+A quick demonstration of the application in action is linked here: https://youtu.be/IVAP2pDQHMg.
 
 
 
